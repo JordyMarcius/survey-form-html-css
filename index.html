@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ArduinoCamp Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  </head>
+  <body>
+    <h1 id="title">ArduinoCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <div>
+        <label id="name-label" for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required />
+      </div>
+      <div>
+        <label id="email-label" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required />
+      </div>
+      <div>
+        <label id="number-label" for="number">Age (optional)</label>
+        <input id="number" name="age" type="number" min="5" max="50" placeholder="Age" />
+      </div>
+      <div>
+        <p>Which option best describes your current role?</p>
+        <select id="dropdown" name="current-role">
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="full-time-job">Full Time Job</option>
+          <option value="full-time-learner">Full Time Learner</option>
+          <option value="prefer-not-say">Prefer not to say</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <p>Would you recommend ArduinoCamp to your friend?</p>
+        <label class="radio-checkbox" for="definitely">
+          <input id="definitely" name="recommend" type="radio" value="definitely" class="inline" checked /> Definitely
+        </label>
+        <label class="radio-checkbox" for="maybe">
+          <input id="maybe" name="recommend" type="radio" value="maybe" class="inline" /> Maybe
+        </label>
+        <label class="radio-checkbox" for="not-sure">
+          <input id="not-sure" name="recommend" type="radio" value="not-sure" class="inline" /> Not sure
+        </label>
+      </div>
+      <div>
+        <p>What is your favorite feature of ArduinoCamp?</p>
+        <select id="dropdown-2" name="fav-features">
+          <option disabled selected value>Select an option</option>
+          <option value="projects">Projects</option>
+          <option value="challenges">Challenges</option>
+          <option value="community">Community</option>
+          <option value="open-source">Open Source</option>
+        </select>
+      </div>
+      <div>
+        <p>What would you like to see improved? (Check all that apply)</p>
+        <label class="radio-checkbox" for="robotics">
+          <input id="robotics" name="improved" type="checkbox" value="robotics" class="inline" /> Robotics Projects
+        </label>
+        <label class="radio-checkbox" for="automation">
+          <input id="automation" name="improved" type="checkbox" value="automation" class="inline" /> Automation Projects
+        </label>
+        <label class="radio-checkbox" for="iot">
+          <input id="iot" name="improved" type="checkbox" value="iot" class="inline" /> Internet of Things Projects
+        </label>
+        <label class="radio-checkbox" for="embedded">
+          <input id="embedded" name="improved" type="checkbox" value="embedded" class="inline" /> Embedded Systems Projects
+        </label>
+        <label class="radio-checkbox" for="monitor-and-log">
+          <input id="monitor-and-log" name="improved" type="checkbox" value="monitor-and-log" class="inline" /> Data Monitoring and Logging
+        </label>
+        <label class="radio-checkbox" for="pcb-design">
+          <input id="pcb-design" name="improved" type="checkbox" value="pcb-design" class="inline" /> PCB Design
+        </label>
+        <label class="radio-checkbox" for="electrical">
+          <input id="electrical" name="improved" type="checkbox" value="electrical" class="inline" /> Electrical Circuits
+        </label>
+      </div>
+      <div>
+        <p>Any comments or suggestions?</p>
+        <textarea id="comments" name="comments" rows="5" cols="100%" placeholder="Enter your comment here..."></textarea>
+      </div>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
